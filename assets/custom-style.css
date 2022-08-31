@@ -80,12 +80,6 @@ svg {
   max-width: 512px;
 }
 
-@media (min-width: 640px) {
-  .calculator-wrapper {
-    min-width: 300px;
-  }
-}
-
 form {
   width: 100%;
 }
