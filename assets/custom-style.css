@@ -56,7 +56,8 @@ body {
 }
 
 .animate {
-  animation: anime 2s linear forwards;
+  transition: stroke-dashoffset 2s linear;
+  stroke-dashoffset: var(--end-offset);
 }
 
 svg {
@@ -69,15 +70,6 @@ svg {
 
 :root {
   --end-offset: 0;
-}
-
-@keyframes anime {
-  0% {
-    stroke-dashoffset: 472;
-  }
-  100% {
-    stroke-dashoffset: var(--end-offset);
-  }
 }
 
 .calculator-wrapper {
@@ -96,4 +88,12 @@ svg {
 
 form {
   width: 100%;
+}
+
+button {
+  transition: all 0.3s;
+}
+
+button:hover {
+  filter: brightness(0.95);
 }
