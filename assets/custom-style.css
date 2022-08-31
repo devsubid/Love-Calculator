@@ -55,6 +55,10 @@ body {
   stroke-dashoffset: 472;
 }
 
+:root {
+  --end-offset: 0;
+}
+
 .animate {
   transition: stroke-dashoffset 2s linear;
   stroke-dashoffset: var(--end-offset);
@@ -66,10 +70,6 @@ svg {
   left: 0;
   bottom: 0;
   right: 0;
-}
-
-:root {
-  --end-offset: 0;
 }
 
 .calculator-wrapper {
