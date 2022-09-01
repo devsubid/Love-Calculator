@@ -59,14 +59,12 @@
     </section>
     <div class="calculator-wrapper w-full">
       <form
-        class="border border-zinc-50 rounded p-3 font-semibold mb-6"
-        action="https://formspree.io/f/mdobdyjz"
-        method="POST"
+        class="rounded p-3 font-semibold mb-6"
         id="my-form"
       >
         <div class="calculator-body">
-          <div class="grid-col grid-col-xs-12 grid-col-md-6 no-margin">
-            <div class="person-details first">
+          <div>
+            <div class="first">
               <div class="form-group">
                 <label class="control-label col-form-label" for="fin_person1"
                   >Your Name</label
@@ -84,7 +82,7 @@
                   />
                 </div>
               </div>
-              <div class="form-group">
+              <div class="form-group" title="Enter Your gender">
                 <div class="controls flex flex-row mt-2">
                   <div class="radio">
                     <label
@@ -111,7 +109,7 @@
               </div>
             </div>
             <span class="separator">&nbsp;</span>
-            <div class="person-details second">
+            <div class="second">
               <div class="form-group">
                 <label class="control-label col-form-label" for="fin_person2"
                   >Partner's Name</label
@@ -129,7 +127,7 @@
                   />
                 </div>
               </div>
-              <div class="form-group">
+              <div class="form-group" title="Enter Partner's gender">
                 <div class="controls flex flex-row mb-6 mt-2">
                   <div class="radio">
                     <label
@@ -160,6 +158,7 @@
         <button
           type="submit"
           class="bg-[#f60057] px-4 py-2 font-bold rounded-lg text-white"
+          title="Click to Calculate"
         >
           Calculate Love %
         </button>
@@ -191,7 +190,7 @@
             </linearGradient>
           </defs>
           <circle
-            class="graph circle animate"
+            class="graph circle transition animate"
             cx="80"
             cy="80"
             r="70"

@@ -47,6 +47,14 @@ body {
   text-align: center;
 }
 
+svg {
+  position: absolute;
+  top: 0;
+  left: 0;
+  bottom: 0;
+  right: 0;
+}
+
 .graph {
   fill: none;
   stroke: url(#GradientColor);
@@ -55,21 +63,30 @@ body {
   stroke-dashoffset: 472;
 }
 
+.percentage{
+  transition: all 2s linear;
+}
+
 :root {
   --end-offset: 0;
 }
 
-.animate {
+.transition{
   transition: stroke-dashoffset 2s linear;
   stroke-dashoffset: var(--end-offset);
 }
 
-svg {
-  position: absolute;
-  top: 0;
-  left: 0;
-  bottom: 0;
-  right: 0;
+.animate {
+  animation: anime 2s linear forwards;
+}
+
+@keyframes anime {
+  0% {
+    stroke-dashoffset: 472;
+  }
+  100% {
+    stroke-dashoffset: var(--end-offset);
+  }
 }
 
 .calculator-wrapper {
@@ -82,6 +99,12 @@ svg {
 
 form {
   width: 100%;
+}
+
+@media (min-width: 640px) {
+  form{
+    box-shadow: rgba(99, 99, 99, 0.2) 0px 2px 8px 0px;
+  }
 }
 
 button {
